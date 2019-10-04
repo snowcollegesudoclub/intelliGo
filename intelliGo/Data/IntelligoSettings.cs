@@ -14,7 +14,7 @@ namespace intelliGo.Data
         public bool IsGlobal => false;
     }
 
-    public class MySettings : ILinqToDBSettings
+    public class IntelligoSettings : ILinqToDBSettings
     {
         public IEnumerable<IDataProviderSettings> DataProviders => Enumerable.Empty<IDataProviderSettings>();
 
@@ -28,7 +28,7 @@ namespace intelliGo.Data
                 yield return
                     new ConnectionStringSettings
                     {
-                        Name = "PostgreSQL",
+                        Name = "Intelligo",
                         ProviderName = "PostgreSQL",
                         ConnectionString = @"Server=localhost; Port=5432; Database=intelligodb; User ID=intelligo; Password=sudoclub;"
                     };

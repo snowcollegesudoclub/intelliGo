@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using intelliGo.Models;
+using intelliGo.Data;
 
 namespace intelliGo.Controllers
 {
@@ -20,6 +21,13 @@ namespace intelliGo.Controllers
 
         public IActionResult Index()
         {
+            //using (var db = new IntelligoDb())
+            //{
+            //    var query = from p in db.Survey
+            //                select p.Name;
+            //    var res = query.ToList();
+            //}
+
             return View();
         }
 
